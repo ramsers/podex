@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+
+$mainRed: #D90D43;
+$darkRed: #8F0C25;
+$blue: #28AAFD;
+$grey: #DEDEDE;
+$green: #51AE5F;
+
+
+body {
+  line-height: 1;
+  background: $grey;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+.pokedex{
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  height: 500px;
+  background: $mainRed;
+  margin: 50px auto;
+  padding: 5px 0;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+
+  h1 {
+    display: block;
+    text-align: center;
+    margin: 25px 0 50px;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  h3 {
+    display: block;
+    text-align: center;
+    margin: 25px 0 50px;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  form {
+    text-align: center;
+  }
+  input[type="text"] {
+    font-size: 2rem;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid $grey;
+  }
+  .btn {
+    display: inline-block;
+    padding: 20px;
+    background: $blue;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  .loading-ctn {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+      &.active { 
+        display: flex;
+      }
+  }
+}
+
+.poke-img {
+  width: 150px;
+  height:  150px;
+  border: 5px solid $grey;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+.poke-list-btn {
+  height: 20px;
+  width: 40px;
+  margin: -156px 52px;
+  position: absolute;
+  border-radius: 5px;
+  background: $green;
+  border: none;
+}
+
+// Do hover effect
+// Do slide out menu with poke list
+
