@@ -4,7 +4,6 @@ $(function(){
     var defaultPokemonData;
 
     var initFunc = function() {
-        // https://pokeapi.co/api/v2/pokemon/?limit=811
         defaultPokemonData  = $.ajax({
             url: "https://pokeapi.co/api/v2/pokemon/" + defaultPokemon,
             method: "GET",
@@ -41,10 +40,23 @@ $(function(){
             alert( "Request failed: " + textStatus + ' ' + error )
           });
         });
+        $('.poke-list-btn').on('click',function(){
+            var pokeList = $.ajax({
+                url: 'https://pokeapi.co/api/v2/pokemon/?limit=811',
+                method: 'GET',
+            });
+            pokeList.done(function(data){
+                var list = data.results;
+                for(var i = 0; i < list.length; i++){
+                    $('.popup-ctn').append('<li><a href="#" class="name">' + list[i].name + '</a></li>');
+                    
+                }
+                $('.popup-ctn').toggleClass('active2');
+            })
+        })
     })
     
-
-
+   
     // console.log($('.box1').children())
        
     // $('.box1').children().css({

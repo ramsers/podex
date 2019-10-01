@@ -99,15 +99,55 @@ body {
 
 
 .poke-list-btn {
-  height: 20px;
-  width: 40px;
-  margin: -156px 52px;
+  height: 50px;
+  width: 145px;
+  margin: -251px 10px;
   position: absolute;
   border-radius: 5px;
   background: $green;
   border: none;
+  display: inline-block;
+  font-size: 1.1rem;
+    &:hover{
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.51);
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.51);
+    border: 1px solid $blue;
+    }
 }
 
+
+// Pop out Div/background
+.popup-btn {
+  position: relative;
+}
+.popup-ctn {
+  text-align: center;
+  background: $grey;
+  height: 200px;
+  width: 50%;
+  position: absolute;
+  top: -182px;
+  left: 120px;
+  display: none;
+  overflow: auto;
+  list-style: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  &.popup-ctn a {
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: $blue;
+    cursor: pointer;
+   }
+  
+    &.active2 {
+      display: block;
+    }
+}
 // Do hover effect
+
+
 // Do slide out menu with poke list
 
